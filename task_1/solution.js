@@ -36,6 +36,11 @@ function addInCartCountChange(value) {
     // увеличьте значение newValue на 1
 
     // Конец решения задания №1.2.
+    let newValue;
+    newValue = oldValue;
+    newValue = oldValue + 1;
+
+    console.log(newValue);
 
     return newValue;
 }

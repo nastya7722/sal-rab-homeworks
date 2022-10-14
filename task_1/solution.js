@@ -56,6 +56,12 @@ function addInCartSumChange(sum, delta) {
     // замените склеивание, используемое в newSum Text на шаблонную строку
 
     // Конец решения задания №1.3.
+    let newSum;
+    newSum = oldSum + difference;
+    let newSumText;
+    newSumText = newSum + "р";
+    
+    console.log(newSumText);
 
     return newSumText;
 }

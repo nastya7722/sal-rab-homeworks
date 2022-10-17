@@ -34,7 +34,7 @@ function addInCartCountChange(value) {
 
     // Конец решения задания №1.2.
     let newValue;
-    newValue = `${oldValue} + 1`;
+    newValue = oldValue + 1;
     
     console.log(newValue);
 

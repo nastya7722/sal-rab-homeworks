@@ -18,6 +18,21 @@ function calcShipping(sum, min, shipping) {
 
     // Конец решения задания №2.1.
 
+    let shippingSum;
+
+    if (productsSum = 0) {
+        shippingSum = 0
+        console.log('Сумма продуктов 0 р')
+    } 
+    if (productsSum >= freeShippingMinSum) {
+        shippingSum = 0
+        console.log('Бесплатная доставка')
+    }
+    if (productsSum > 0 && productsSum < freeShippingMinSum) {
+        shippingSum = shippingPrice
+        console.log('Стоимость доставки составляет...')
+    }
+
     return shippingSum;
 }
 
@@ -35,6 +50,15 @@ function calcDiscount(sum, min, discount) {
     // иначе присвойте discountSum значение 0
 
     // Конец решения задания №2.2.
+
+    let discountSum;
+
+    if (productsSum > discountMinSum || productsSum == discountMinSum) {
+        discountSum = `Скидка ${productsSum / 100 * discountPart}`
+        console.log('Ваша скидка составляет...')
+    }else if(discountSum = 0) {
+        console.log('Вам не предоставлена скидка')
+    }
 
     return discountSum;
 }
@@ -59,6 +83,19 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     // если shippingSum равно нулю, то freeShipping должна быть равна true, иначе freeShipping должна быть равна false
 
     // Конец решения задачи №2.3.
+
+    let totalSum;
+    totalSum = productsSum;
+    if (totalSum = `Стоимость заказа ${productsSum - discountSum}`) {
+    console.log('К оплате без учета доставки')
+    }
+    if (totalSum = `Заказ с учетом доставки ${productsSum + shippingSum}`) {
+        console.log('К оплате....оплатить?')
+    }
+    let freeShipping;
+    shippingSum = 0;
+    freeShipping === shippingSum;
+    
 
     return {discount: discountSum, freeShipping, shipping: shippingSum, total: totalSum};
 }

@@ -46,7 +46,7 @@ function sendRequest(name, phone, address, goods, sum) {
     data.order.address = address;
     data.order.sum = sum;
     data.client = `${name} ${phone}`;
-    data.address = `${address.street} + ${address.house} + ${address.entrance} + ${address.floor} + ${address.flat}`;
+    data.address = `${address.street}, ${address.house}, ${address.entrance}, ${address.floor}, ${address.flat}`;
 
     
 
